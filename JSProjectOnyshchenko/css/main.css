@@ -1,0 +1,366 @@
+#mainContent * {
+    font-family: "Open Sans", serif;
+}
+
+.container {
+    display: none;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+    border: 1px solid gray;
+}
+
+.container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+.container input:checked ~ .checkmark {
+    background-color: rgba(23, 194, 0, 0.39);
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.container .checkmark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #086900;
+}
+
+#mainContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.question {
+    border: 1px solid black;
+    margin-bottom: 10px;
+    padding: 0 10px 5px;
+    width: 700px;
+}
+
+.questionText {
+    font-size: 25px;
+}
+
+#end {
+    display: none;
+    font-family: "Open Sans";
+    font-size: 13px;
+    position: fixed;
+    bottom: 10px;
+    border: 1px solid darkgrey;
+    width: 150px;
+    height: 40px;
+    border-radius: 40px;
+    background-color: white;
+    outline: none;
+    transition: 0.5s;
+    box-shadow: 2px 3px 5px 0px rgba(95, 173, 83, 1);
+}
+
+#constructorButton {
+    font-family: "Open Sans";
+    font-size: 13px;
+    position: fixed;
+    bottom: 70px;
+    border: 1px solid darkgrey;
+    width: 150px;
+    height: 40px;
+    border-radius: 40px;
+    background-color: white;
+    outline: none;
+    transition: 0.5s;
+    box-shadow: 2px 3px 5px 0px rgba(95, 173, 83, 1);
+}
+
+#start {
+    font-family: "Open Sans";
+    font-size: 13px;
+    position: fixed;
+    bottom: 10px;
+    border: 1px solid darkgrey;
+    width: 150px;
+    height: 40px;
+    border-radius: 40px;
+    background-color: white;
+    outline: none;
+    transition: 0.5s;
+    box-shadow: 2px 3px 5px 0px rgba(95, 173, 83, 1);
+}
+
+#sendCButtons {
+    display: none;
+    font-family: "Open Sans";
+    font-size: 13px;
+    position: fixed;
+    bottom: 10px;
+    border: 1px solid darkgrey;
+    width: 150px;
+    height: 40px;
+    border-radius: 40px;
+    background-color: white;
+    outline: none;
+    transition: 0.5s;
+    box-shadow: 2px 3px 5px 0px rgba(95, 173, 83, 1);
+}
+
+#nextButton {
+    display: none;
+    font-family: "Open Sans";
+    font-size: 13px;
+    position: fixed;
+    bottom: 70px;
+    border: 1px solid darkgrey;
+    width: 150px;
+    height: 40px;
+    border-radius: 40px;
+    background-color: white;
+    outline: none;
+    transition: 0.5s;
+    box-shadow: 2px 3px 5px 0px rgba(95, 173, 83, 1);
+}
+
+#restart {
+    display: none;
+    font-family: "Open Sans", serif;
+    font-size: 13px;
+    position: fixed;
+    bottom: 10px;
+    border: 1px solid darkgrey;
+    width: 150px;
+    height: 40px;
+    border-radius: 40px;
+    background-color: white;
+    outline: none;
+    transition: 0.5s;
+    box-shadow: 2px 3px 5px 0px rgba(95, 173, 83, 1);
+}
+
+#end:hover {
+    background-color: rgba(95, 173, 83, 1);
+}
+
+#constructorButton:hover {
+    background-color: rgba(95, 173, 83, 1);
+}
+
+#start:hover {
+    background-color: rgba(95, 173, 83, 1);
+}
+
+#sendCButtons:hover {
+    background-color: rgba(95, 173, 83, 1);
+}
+
+#nextButton:hover {
+    background-color: rgba(95, 173, 83, 1);
+}
+
+#restart:hover {
+    background-color: rgba(95, 173, 83, 1);
+}
+
+.titleText {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 25px;
+}
+
+#resBody {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+#ansDiv {
+    width: 500px;
+}
+
+#ansDiv div {
+    font-size: 20px;
+    font-family: "Open Sans", serif;
+}
+
+.white {
+    border: 1px solid gray;
+    margin-top: 40px;
+    background-color: white;
+    height: 85px;
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.red {
+    border: 1px solid gray;
+    border-top: none;
+    background-color: #ffb4b4;
+    height: 85px;
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.green {
+    border: 1px solid gray;
+    border-top: none;
+    background-color: rgb(150, 255, 162);
+    height: 85px;
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.result, .answersCount, .youRes {
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.base-timer {
+    position: fixed;
+    width: 100px;
+    height: 100px;
+}
+
+.base-timer__svg {
+    transform: scaleX(-1);
+}
+
+.base-timer__circle {
+    fill: none;
+    stroke: none;
+}
+
+.base-timer__path-elapsed {
+    stroke-width: 7px;
+    stroke: grey;
+}
+
+.base-timer__path-remaining {
+    stroke-width: 7px;
+    stroke-linecap: round;
+    transform: rotate(90deg);
+    transform-origin: center;
+    transition: 1s linear all;
+    fill-rule: nonzero;
+    stroke: currentColor;
+}
+
+.base-timer__path-remaining.green {
+    color: rgb(65, 184, 131);
+}
+
+.base-timer__path-remaining.orange {
+    color: orange;
+}
+
+.base-timer__path-remaining.red {
+    color: red;
+}
+
+.base-timer__label {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 33px;
+}
+
+#constructorMain {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 120px;
+}
+
+.constructorCard {
+    padding: 27px 35px 27px 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+}
+
+.questDiv {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 40px;
+    margin: 10px;
+}
+
+.questDiv > input {
+    width: 80%;
+    font-size: 1.7em;
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
+.answerDiv {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.answerDiv > input {
+    margin: 10px;
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
+.answerDiv > label {
+    margin-bottom: 26.5px;
+}
+
+.answInput {
+    font-size: 1em;
+    height: 40px;
+    width: 300px;
+}
